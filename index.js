@@ -1,5 +1,5 @@
 async function handleRequest(request) {
-    let apiUrl = request.url.replace("yqapi", "")
+    let apiUrl = request.url.replace("yqapi.", "www.yuque.com")
     request = new Request(apiUrl, request)
     let response = await fetch(request)
     response = new Response(response.body, response)
